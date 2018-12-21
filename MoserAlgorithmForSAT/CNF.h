@@ -56,15 +56,6 @@ public:
 			liter.randomSample();
 	}
 
-	bool intersects(const Clause &other) const
-	{
-		for (auto &liter : liters)
-			for (auto &otherLiter : other.liters)
-				if (liter.varEqualsTo(otherLiter))
-					return true;
-		return false;
-	}
-
 	bool hasLiteral(const Literal &liter) const
 	{
 		for (auto &myLiter : liters)
